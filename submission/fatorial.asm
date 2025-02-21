@@ -1,33 +1,22 @@
+    LD  UM         
+    MM  RES        
 
+LOOP:
+    LD  N          
+    JZ  FIM        
 
+    MP  RES        
+    MM  RES        
 
-        LD  N          
-        JN  END        
-        JZ  ONE        
-        MM  TEMP       
+    LD  N          
+    SB  UM         
+    MM  N          
 
-        LV  1          
-        MM  RES        
+    JUMP LOOP      
 
-LOOP:   LD  TEMP       
-        SB  UM         
-        JZ  END        
-        MM  TEMP       
-        
-        LD  RES        
-        ML  TEMP       
-        MM  RES        
-        
-        JP  LOOP       
+FIM:
+    HM  /000       
 
-ONE:    LV  1          
-        MM  RES        
-        JP  END        
-
-END:    HM            
-
-
-N:      K  0x100      
-RES:    K  0x102      
-TEMP:   K  0          
-UM:     K  1          
+UM:   K   /0001    
+N:    K   /0005    
+RES:  K   /0000    
