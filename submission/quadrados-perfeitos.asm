@@ -1,0 +1,30 @@
+LOOP LD ODD_INDEX   
+ML DOIS
+AD UM
+AD PARCIAL
+MM PARCIAL
+PTR MM ENDERECO
+LD PTR
+AD DOIS         
+MM PTR      
+LD ODD_INDEX
+AD UM
+MM ODD_INDEX
+LD ITERACAO
+AD UM
+MM ITERACAO         
+SB LIMITE
+JN LOOP
+HM LOOP 
+
+PARCIAL          K /0000  
+LIMITE           K /003F   
+ZERO             K /0000
+UM               K /0001
+DOIS             K /0002
+ODD_INDEX        K /0000   
+ITERACAO         K /0000
+
+@         /0100    
+INICIO    K /0000   
+ENDERECO  K /0000
