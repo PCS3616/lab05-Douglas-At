@@ -1,22 +1,31 @@
-    LD  UM         
-    MM  RES        
+LD UM
+MM PARCIAL
+LD UM
+MM ITERACAO
+SC CALC_FATORIAL
+LD PARCIAL
+MM RESULT
+HM FINAL
 
-LOOP:
-    LD  N          
-    JZ  FIM        
+CALC_FATORIAL JP CONTINUA
 
-    MP  RES        
-    MM  RES        
+CONTINUA LD VALOR
+SB ITERACAO
+JN SAIR
+LD PARCIAL
+ML ITERACAO
+MM PARCIAL
+LD ITERACAO
+AD UM
+MM ITERACAO
+JP CONTINUA
 
-    LD  N          
-    SB  UM         
-    MM  N          
+SAIR RS CALC_FATORIAL
 
-    JUMP LOOP      
-
-FIM:
-    HM  /000       
-
-UM:   K   /0001    
-N:    K   /0005    
-RES:  K   /0000    
+@ /0100
+VALOR K /0002
+RESULT K /0000
+PARCIAL K /0000
+ITERACAO K /0000
+UM K /0001
+FINAL K /0000
